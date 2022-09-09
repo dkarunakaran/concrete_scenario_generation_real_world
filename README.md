@@ -26,3 +26,20 @@ Due to intersection and missing lane markings, the initial result of the lane co
 <p align="center">
   <img width=400 src="https://github.com/dkarunakaran/concrete_scenario_generation_real_world/blob/master/readme_figure/broken_lines.png?raw=true">
 </p>
+
+### OpenSCENARIO file generation
+
+In OpenSCENARIO, we need to set the initial behaviour of the ego and adversary vehicle. There are a few components in OpenSCENARIO to describe the trajectory of the traffic participants. Firstly, the event is one of the main components to describe the lane change maneuver. The event consists of condition and action. For instance, cut-in and cut-out are events generated using the 'relative distance' condition to trigger and 'lane-change' action to create the maneuver. The $trigger\\_distance$ and $final\\_lane$ parameters are used for the triggering condition and lane change action, respectively. In this work, we use parameters from four control points to create a trajectory similar to a real-world scenario, so we use parameters from four control points. An event in OpenSCENARIO represents each point. The adversary vehicle starts with an initial speed set earlier. Once they meet a 'travelled distance' condition similar to the lane-change trigger condition, the velocity is applied as the 'absolute speed' action. We apply the same strategy for the event creation for two other checkpoints: 'cut_end' and 'scenario_end'. When executing the OpenSCENARIO file in the simulator, these events are triggered by applying actions when they meet the travelled distance condition.
+
+### OpenDRIVE file generation
+One of the OpenSCENARIO format's requirements is the reference to the OpenDRIVE file. The OpenDRIVE file defines the road network for generating the scenarios in simulation. In this work, we have employed an automatic OpenDRIVE file generation, compared to manual creation in other scenario generation methods.
+
+We capture five parameters during the lane construction stage, as shown in the below Figure: $length$, $width$, $no\\_of\\_lanes$, $curvature\\_diff$, and $s\\_dist$.  We capture and store these five parameters from each section. The road is divided into 25 meters segments/sections, so the $length$ parameter is set to twenty-five meters. The road curvature is the relative heading between two road segments. We use the $curvature\\_diff$ parameter to find the relative heading. This parameter is the difference between the curvature of the previous section and the current curvature. If the curvature difference is zero, both sections have relatively no heading changes. We calculate the gradient of the centre line of the road section to compute the curvature. The $s\\_dist$$ is the distance total distance travelled, similar to the longitudinal displacement in the Frenet frame. 
+
+
+<p align="center">
+  <img width=400 src="https://github.com/dkarunakaran/concrete_scenario_generation_real_world/blob/master/readme_figure/lineToOD.png?raw=true">
+</p>
+
+The OpenDRIVE file generation starts with the 'planView' element. It defines the shape of the road. As we create the road network section by section, we need to define the shape of each section. We use $curvature\\_diff$ of the current and previous sections to create a spiral shape. Once we create the shape of each section, we add it to the 'planView' element. We can create lanes using the 'laneSection' element, and the number of this element depends on the number of road sections similar to 'planView'. The laneSection requires the s\_dist parameter and the number of lanes in each road section from the $no\\_of\\_lanes$ parameter. All the 'laneSection' components are added to the parent element called 'lanes'. In the end, we add 'planView' and 'lanes' elements to the 'road' element that creates the whole structure of the OpenDRIVE file. 
+
