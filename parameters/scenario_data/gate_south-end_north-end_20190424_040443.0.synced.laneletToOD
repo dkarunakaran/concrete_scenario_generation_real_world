@@ -1,0 +1,27 @@
+{
+    "data": [
+        {
+            "laneWidth": 3.1235846966087144,
+            "length": 25.209972841773602,
+            "mDiff": 0.0,
+            "noLanes": 1,
+            "sStart": 0.0
+        },
+        {
+            "laneWidth": 3.1308911922837663,
+            "length": 25.106674264329225,
+            "mDiff": 0.0002649409097022358,
+            "noLanes": 1,
+            "sStart": 25.209972841773602
+        },
+        {
+            "laneWidth": 3.143472614619783,
+            "length": 25.14855903748984,
+            "mDiff": 0.00018095798913862583,
+            "noLanes": 1,
+            "sStart": 50.31664710610283
+        }
+    ],
+    "file": "/data/ibeo/all_data/dhanoop-2020//gate_south-end_north-end_20190424_040443.0.synced.bag",
+    "noOfLanesStart": 1
+}

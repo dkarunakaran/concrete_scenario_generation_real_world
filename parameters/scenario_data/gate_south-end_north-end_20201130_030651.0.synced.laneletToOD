@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "laneWidth": 3.2475084438653017,
+            "length": 25.19355971053418,
+            "mDiff": 0.0,
+            "noLanes": 2,
+            "sStart": 0.0
+        },
+        {
+            "laneWidth": 3.26614671900237,
+            "length": 25.52208770226588,
+            "mDiff": 7.95332310308379e-05,
+            "noLanes": 2,
+            "sStart": 25.139214775434013
+        }
+    ],
+    "file": "/data/ibeo/all_data/dhanoop-2020//gate_south-end_north-end_20201130_030651.0.synced.bag",
+    "noOfLanesStart": 2
+}

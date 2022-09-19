@@ -1,0 +1,27 @@
+{
+    "data": [
+        {
+            "laneWidth": 3.0749533221724903,
+            "length": 25.170488029492713,
+            "mDiff": 0.0,
+            "noLanes": 2,
+            "sStart": 0.0
+        },
+        {
+            "laneWidth": 3.0818562957735534,
+            "length": 25.1657068638396,
+            "mDiff": 4.7715098077787645e-05,
+            "noLanes": 2,
+            "sStart": 25.170488029492713
+        },
+        {
+            "laneWidth": 3.108325197923925,
+            "length": 25.33512749234277,
+            "mDiff": -0.0002902903385831419,
+            "noLanes": 2,
+            "sStart": 50.33619489333231
+        }
+    ],
+    "file": "/data/ibeo/all_data/data_for_database/gate_south-end_north-end_20181113_041223.0.bag",
+    "noOfLanesStart": 2
+}

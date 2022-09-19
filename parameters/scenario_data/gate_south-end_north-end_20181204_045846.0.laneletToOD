@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "laneWidth": null,
+            "length": 25.079639109642297,
+            "mDiff": 0.0,
+            "noLanes": 0,
+            "sStart": 0.0
+        },
+        {
+            "laneWidth": null,
+            "length": 25.375506873565936,
+            "mDiff": 0.0002975940545395378,
+            "noLanes": 0,
+            "sStart": 25.079639109642297
+        }
+    ],
+    "file": "/data/ibeo/all_data/data_for_database/gate_south-end_north-end_20181204_045846.0.bag",
+    "noOfLanesStart": 0
+}
